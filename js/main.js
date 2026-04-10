@@ -43,12 +43,12 @@ function toggleMenu() {
     isMenuOpen = !isMenuOpen;
     mobileMenu.classList.toggle('translate-x-full', !isMenuOpen);
     mobileMenu.classList.toggle('translate-x-0', isMenuOpen);
-    
+
     // Change icon
     if (isMenuOpen) {
         menuIcon.setAttribute('data-lucide', 'x');
         document.body.style.overflow = 'hidden';
-        
+
         // Staggered animation for links
         mobileNavLinks.forEach((link, i) => {
             setTimeout(() => {
@@ -59,7 +59,7 @@ function toggleMenu() {
     } else {
         menuIcon.setAttribute('data-lucide', 'menu');
         document.body.style.overflow = '';
-        
+
         mobileNavLinks.forEach(link => {
             link.classList.add('opacity-0', 'translate-y-4');
             link.classList.remove('opacity-100', 'translate-y-0');
@@ -69,7 +69,7 @@ function toggleMenu() {
 }
 
 mobileMenuToggle.addEventListener('click', toggleMenu);
-if(mobileMenuClose) mobileMenuClose.addEventListener('click', toggleMenu);
+if (mobileMenuClose) mobileMenuClose.addEventListener('click', toggleMenu);
 
 mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -150,34 +150,91 @@ window.addEventListener('load', () => {
     // Nav Indicator Initial Position
     const active = document.querySelector('.nav-pill.active');
     if (active) moveIndicator(active);
+});
 
-    // Counter Animation
-    const counters = document.querySelectorAll('[data-count]');
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = parseInt(entry.target.getAttribute('data-count'));
-                const duration = 2000;
-                const startTime = performance.now();
+// ── Contact Form Handler (Web3Forms) ─────────────────────────────────────────
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-                const updateCount = (currentTime) => {
-                    const elapsed = currentTime - startTime;
-                    const progress = Math.min(elapsed / duration, 1);
-                    const easeOutExpo = 1 - Math.pow(2, -10 * progress);
-                    const currentCount = Math.floor(easeOutExpo * target);
-                    entry.target.innerText = currentCount;
+        const btn = document.getElementById('cf-submit');
+        const btnText = document.getElementById('cf-btn-text');
+        const iconContainer = document.getElementById('cf-btn-icon-container');
+        const toast = document.getElementById('cf-toast');
 
-                    if (progress < 1) {
-                        requestAnimationFrame(updateCount);
-                    } else {
-                        entry.target.innerText = target;
-                    }
-                };
-                requestAnimationFrame(updateCount);
-                counterObserver.unobserve(entry.target);
+        // Loading state
+        btn.disabled = true;
+        btnText.textContent = 'Sending…';
+        iconContainer.innerHTML = '<i data-lucide="loader" class="w-3.5 h-3.5 animate-spin"></i>';
+        lucide.createIcons();
+
+        try {
+            const formData = new FormData(contactForm);
+
+            // Check if user still has placeholders
+            if (formData.get('access_key') === 'YOUR_WEB3FORMS_KEY') {
+                throw new Error('Its an internal error, Please mail us directly');
             }
-        });
-    }, { threshold: 0.5 });
 
-    counters.forEach(counter => counterObserver.observe(counter));
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+
+            if (data.success) {
+                toast.textContent = '✓ Message sent! I\'ll get back to you soon.';
+                toast.className = 'text-[11px] font-bold text-center py-3 px-4 rounded-xl bg-green-50 text-green-700 border border-green-200 block mb-4 animate-in fade-in zoom-in duration-300';
+                contactForm.reset();
+                
+                // Refresh to main root (Home) after 4 seconds
+                setTimeout(() => {
+                    window.location.href = window.location.origin + window.location.pathname;
+                }, 4000);
+            } else {
+                throw new Error(data.message || 'Submission failed');
+            }
+        } catch (err) {
+            toast.textContent = '✕ ' + err.message;
+            toast.className = 'text-[11px] font-bold text-center py-3 px-4 rounded-xl bg-red-50 text-red-600 border border-red-200 block mb-4 animate-in fade-in zoom-in duration-300';
+        } finally {
+            btn.disabled = false;
+            btnText.textContent = 'Send Message';
+            iconContainer.innerHTML = '<i data-lucide="send" class="w-3.5 h-3.5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>';
+            lucide.createIcons();
+            setTimeout(() => {
+                toast.classList.add('opacity-0');
+                setTimeout(() => toast.className = 'hidden', 500);
+            }, 5000);
+        }
+    });
+}
+
+// ── Asset Protection ──────────────────────────────────────────────────────────
+
+// Disable right-click context menu
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+// Disable image dragging (prevents drag-to-desktop save)
+document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('draggable', 'false');
+    img.addEventListener('dragstart', (e) => e.preventDefault());
+});
+
+// Re-apply drag block on any dynamically added images
+const imgObserver = new MutationObserver(() => {
+    document.querySelectorAll('img:not([draggable="false"])').forEach(img => {
+        img.setAttribute('draggable', 'false');
+        img.addEventListener('dragstart', (e) => e.preventDefault());
+    });
+});
+imgObserver.observe(document.body, { childList: true, subtree: true });
+
+// Block keyboard shortcuts: Ctrl+S (save), Ctrl+U (view source), Ctrl+P (print)
+document.addEventListener('keydown', (e) => {
+    const blocked = (
+        e.ctrlKey && ['s', 'u', 'p'].includes(e.key.toLowerCase())
+    );
+    if (blocked) e.preventDefault();
 });
