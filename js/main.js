@@ -5,7 +5,12 @@ lucide.createIcons();
 // Global Selectors
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-pill');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 const indicator = document.getElementById('nav-indicator');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+const menuIcon = document.getElementById('menu-icon');
 
 // Wobbly Path Collection
 const landscapePaths = [
@@ -30,6 +35,46 @@ document.querySelectorAll('.wobbly-container').forEach((el, index) => {
     path.classList.add("wobbly-path");
     svg.appendChild(path);
     el.prepend(svg);
+});
+
+// Mobile Menu Logic
+let isMenuOpen = false;
+function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    mobileMenu.classList.toggle('translate-x-full', !isMenuOpen);
+    mobileMenu.classList.toggle('translate-x-0', isMenuOpen);
+    
+    // Change icon
+    if (isMenuOpen) {
+        menuIcon.setAttribute('data-lucide', 'x');
+        document.body.style.overflow = 'hidden';
+        
+        // Staggered animation for links
+        mobileNavLinks.forEach((link, i) => {
+            setTimeout(() => {
+                link.classList.remove('opacity-0', 'translate-y-4');
+                link.classList.add('opacity-100', 'translate-y-0');
+            }, 200 + (i * 100));
+        });
+    } else {
+        menuIcon.setAttribute('data-lucide', 'menu');
+        document.body.style.overflow = '';
+        
+        mobileNavLinks.forEach(link => {
+            link.classList.add('opacity-0', 'translate-y-4');
+            link.classList.remove('opacity-100', 'translate-y-0');
+        });
+    }
+    lucide.createIcons();
+}
+
+mobileMenuToggle.addEventListener('click', toggleMenu);
+if(mobileMenuClose) mobileMenuClose.addEventListener('click', toggleMenu);
+
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (isMenuOpen) toggleMenu();
+    });
 });
 
 // Mobile touch animation support

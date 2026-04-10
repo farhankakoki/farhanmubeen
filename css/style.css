@@ -218,6 +218,25 @@ body {
     pointer-events: none;
 }
 
+.mobile-nav-link {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-nav-link:hover {
+    color: #000;
+    transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+    .h-16 {
+        height: 64px;
+    }
+    
+    #header-blur-bg {
+        height: 64px;
+    }
+}
+
 input::placeholder,
 textarea::placeholder {
     color: #BBB;
