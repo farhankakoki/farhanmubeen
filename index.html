@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#111111">
+
+    <!-- Primary SEO Meta -->
+    <title>Farhan Mubeen | Graphic Designer &amp; Web Developer | Kakoki Creative Co</title>
+    <meta name="description"
+        content="Farhan Mubeen is a Graphic Designer and Web Developer from Kerala, working with Kakoki Creative Co. Explore portfolio, projects, and services in branding, web development, and digital design.">
+    <meta name="keywords"
+        content="Farhan Mubeen, Kakoki Creative Co, Graphic Designer Kerala, Web Developer Malappuram, Freelance Web Developer India, Freelance Designer Kerala, UI UX Designer Malappuram, Branding Agency Kakoki, Website Developer Kerala">
+    <meta name="author" content="Farhan Mubeen">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://farhan.kakokicreative.in">
+
+    <!-- Open Graph / Social SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://farhan.kakokicreative.in">
+    <meta property="og:title" content="Farhan Mubeen | Kakoki Creative Co">
+    <meta property="og:description"
+        content="Farhan Mubeen is a Graphic Designer and Web Developer from Kerala, working with Kakoki Creative Co. Explore portfolio, projects, and services in branding, web development, and digital design.">
+
+    <meta property="og:site_name" content="Farhan Mubeen Portfolio">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://farhan.kakokicreative.in">
+    <meta name="twitter:title" content="Farhan Mubeen | Graphic Designer &amp; Web Developer | Kakoki Creative Co">
+    <meta name="twitter:description"
+        content="Farhan Mubeen is a Graphic Designer and Web Developer from Kerala, working with Kakoki Creative Co. Explore portfolio, projects, and services in branding, web development, and digital design.">
+
+    <meta name="twitter:creator" content="@kakokicreative">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://farhan.kakokicreative.in/#farhan",
+                "name": "Farhan Mubeen",
+                "alternateName": "Farhan Mubeen K",
+                "jobTitle": ["Graphic Designer", "Web Developer", "AI Web Developer"],
+                "description": "Freelance Graphic Designer and Web Developer based in Areekode, Malappuram, Kerala, India. Founder and lead designer at Kakoki Creative Co.",
+                "url": "https://farhan.kakokicreative.in",
+                "email": "farhankotta786@gmail.com",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Areekode",
+                    "addressRegion": "Malappuram, Kerala",
+                    "addressCountry": "IN"
+                },
+                "worksFor": {
+                    "@id": "https://kakokicreative.in/#organization"
+                },
+                "knowsAbout": [
+                    "Graphic Design", "Web Development", "Branding", "UI/UX Design",
+                    "AI Solutions", "Motion Graphics", "SEO", "React", "Next.js"
+                ],
+                "sameAs": [
+                    "https://www.linkedin.com/in/farhankakoki",
+                    "https://www.instagram.com/kakokicreative"
+                ]
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://kakokicreative.in/#organization",
+                "name": "Kakoki Creative Co",
+                "alternateName": "Kakoki Creative",
+                "url": "https://kakokicreative.in",
+                "description": "A Kerala-based creative agency specializing in branding, web development, graphic design, and AI solutions. Founded by Farhan Mubeen.",
+                "founder": {
+                    "@id": "https://farhan.kakokicreative.in/#farhan"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Areekode",
+                    "addressRegion": "Malappuram, Kerala",
+                    "addressCountry": "IN"
+                },
+                "areaServed": ["Kerala", "India"],
+                "sameAs": [
+                    "https://www.instagram.com/kakokicreative"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "url": "https://farhan.kakokicreative.in",
+                "name": "Farhan Mubeen Portfolio",
+                "description": "Official portfolio of Farhan Mubeen — Graphic Designer and Web Developer at Kakoki Creative Co, Kerala.",
+                "author": {
+                    "@id": "https://farhan.kakokicreative.in/#farhan"
+                }
+            }
+        ]
+    }
+    </script>
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    container: { center: true, padding: '2rem' },
+                    colors: {
+                        background: 'hsl(0 0% 98%)',
+                        foreground: 'hsl(0 0% 8%)',
+                        card: 'hsl(100 100% 100%)',
+                        primary: 'hsl(0 0% 8%)',
+                        'primary-foreground': 'hsl(0 0% 100%)',
+                        secondary: 'hsl(0 0% 95%)',
+                        muted: 'hsl(0 0% 93%)',
+                        'muted-foreground': 'hsl(0 0% 45%)',
+                        border: 'hsl(0 0% 90%)',
+                    },
+                    fontFamily: {
+                        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+                        body: ['DM Sans', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- UI Tools -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="selection:bg-primary selection:text-primary-foreground">
+
+    <!-- Header Navigation -->
+    <header id="main-header" class="fixed top-0 inset-x-0 z-[100] transition-all duration-300 pointer-events-none">
+        <div id="header-blur-bg"
+            class="absolute inset-x-0 top-0 h-28 bg-white/40 backdrop-blur-3xl opacity-0 transition-opacity duration-300"
+            style="-webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);">
+        </div>
+        <div class="relative max-w-[1400px] mx-auto w-full h-28 px-12 md:px-24 flex items-center">
+            <div class="pointer-events-auto"></div>
+            <div class="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none">
+                <nav id="desktop-nav"
+                    class="relative flex items-center gap-1 rounded-full border border-black/[0.04] bg-white px-2 py-2 shadow-[0_12px_40px_rgba(0,0,0,0.06)] pointer-events-auto opacity-0 translate-y-[-10px] transition-all duration-700">
+                    <div id="nav-indicator" class="opacity-0"></div>
+                    <a href="#home" class="nav-pill">Home</a>
+                    <a href="#about" class="nav-pill">About</a>
+                    <a href="#skills" class="nav-pill">What I Do</a>
+                    <a href="#projects" class="nav-pill">Projects</a>
+                    <a href="#experience" class="nav-pill">Experience</a>
+                    <a href="#contact" class="nav-pill">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-[100svh] flex flex-col justify-center px-12 md:px-24"
+        style="padding-top: 20vh;">
+
+        <!-- WORK sticker — top right -->
+        <div class="absolute right-[7%] top-[14%] hidden lg:flex flex-col items-center animate-spring-in sticker-group cursor-pointer"
+            style="--rotate-start: -18deg; --rotate-end: -6deg; animation-delay: 0.5s;">
+            <a href="#projects" class="flex flex-col items-center gap-2"
+                aria-label="View Farhan Mubeen's work and projects">
+                <img src="assets/images/sticker-work.png" alt="Farhan Mubeen portfolio projects - Kakoki Creative Co"
+                    class="w-[120px] xl:w-[150px] sticker-img-work drop-shadow-xl">
+                <span
+                    class="bg-black text-white text-[7px] font-black px-3 py-[5px] rounded-[5px] tracking-[0.15em] uppercase font-display">WORK</span>
+            </a>
+        </div>
+
+        <!-- CONTACT sticker — middle right, shifted left -->
+        <div class="absolute right-[22%] top-[43%] hidden lg:flex flex-col items-center animate-spring-in sticker-group cursor-pointer"
+            style="--rotate-start: 12deg; --rotate-end: 3deg; animation-delay: 0.75s; z-index: 30;">
+            <a href="#contact" class="flex flex-col items-center gap-2" style="pointer-events: auto;"
+                aria-label="Contact Farhan Mubeen — Graphic Designer at Kakoki Creative Co">
+                <img src="assets/images/sticker-contact.png"
+                    alt="Contact Farhan Mubeen - Graphic Designer and Web Developer, Kakoki Creative Co, Kerala"
+                    class="w-[110px] xl:w-[138px] sticker-img-contact" style="pointer-events: auto; display: block;">
+                <span
+                    class="bg-black text-white text-[7px] font-black px-3 py-[5px] rounded-[5px] tracking-[0.15em] uppercase font-display">CONTACT</span>
+            </a>
+        </div>
+
+        <!-- RESUME sticker — bottom right -->
+        <div class="absolute right-[7%] bottom-[12%] hidden lg:flex flex-col items-center animate-spring-in sticker-group cursor-pointer"
+            style="--rotate-start: -8deg; --rotate-end: -2deg; animation-delay: 1s;">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2"
+                aria-label="Download Farhan Mubeen's resume — Web Developer and Designer, Kakoki Creative Co">
+                <img src="assets/images/sticker-resume.png"
+                    alt="Download resume of Farhan Mubeen — Graphic Designer and Web Developer at Kakoki Creative Co, Malappuram Kerala"
+                    class="w-[120px] xl:w-[150px] sticker-img-resume drop-shadow-xl">
+                <span
+                    class="bg-black text-white text-[7px] font-black px-3 py-[5px] rounded-[5px] tracking-[0.15em] uppercase font-display">RESUME</span>
+            </a>
+        </div>
+
+        <!-- Main content -->
+        <div class="max-w-[1400px] mx-auto w-full">
+            <h1 class="font-black font-display uppercase select-none mb-8 leading-[0.82] tracking-[-0.04em]"
+                style="font-size: clamp(3.5rem, 11vw, 8.5rem);" data-aos="fade-up"
+                aria-label="Farhan Mubeen — Graphic Designer and Web Developer, Kakoki Creative Co, Kerala">
+                FARHAN<br>MUBEEN K
+                <span class="sr-only"> — Graphic Designer &amp; Web Developer | Kakoki Creative Co | Malappuram, Kerala,
+                    India</span>
+            </h1>
+
+            <div class="flex flex-wrap gap-2 mb-8" data-aos="fade-up" data-aos-delay="150">
+                <span
+                    class="px-4 py-1.5 rounded-full border border-black/[0.12] bg-white text-[10px] font-medium text-[#444] tracking-wide">Graphic
+                    Designer</span>
+                <span
+                    class="px-4 py-1.5 rounded-full border border-black/[0.12] bg-white text-[10px] font-medium text-[#444] tracking-wide">@Kakoki
+                    Creative Co.</span>
+                <span
+                    class="px-4 py-1.5 rounded-full border border-black/[0.12] bg-white text-[10px] font-medium text-[#444] tracking-wide">Web
+                    Developer</span>
+                <span
+                    class="px-4 py-1.5 rounded-full border border-black/[0.12] bg-white text-[10px] font-medium text-[#444] tracking-wide">1.5+
+                    years experience</span>
+            </div>
+
+            <div class="max-w-md" data-aos="fade-up" data-aos-delay="300">
+                <p class="text-[13px] font-semibold text-[#222] mb-2 leading-snug">
+                    Design is <span class="font-black text-[#111]">how I think</span>. Curiosity is <span
+                        class="font-black text-[#111]">how I live</span>.
+                </p>
+                <p class="text-[12.5px] text-[#999] leading-relaxed font-light">
+                    From web apps to branding systems, I craft digital experiences where creativity meets technology and
+                    clean code meets <span class="font-semibold text-[#666]">bold visuals</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12">
+        <div class="container mx-auto px-12 md:px-24 max-w-6xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-black font-display mb-4 tracking-tight">About Me</h2>
+                <p class="text-[12px] font-medium text-muted-foreground/50 tracking-[0.05em]">A little more about who I
+                    am, what drives me, and how I work.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-[1.1fr_1fr] gap-12 xl:gap-20 items-center">
+                <div data-aos="fade-right" class="space-y-8">
+                    <div class="space-y-5 text-[15px] leading-[1.7] text-foreground/80 font-light">
+                        <p>I'm <span class="font-bold text-foreground">Farhan Mubeen K</span>, a Graphic Designer, AI
+                            Web Developer, and Video Editor based in Areekode, Malappuram, Kerala, India. I'm passionate
+                            about building modern, high-performance digital experiences.</p>
+                        <p>I specialize in combining creativity with technology to deliver visually strong branding and
+                            functional web solutions.</p>
+                        <p>My goal is to help businesses grow through clean design, smart automation, and scalable
+                            digital products.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3.5 py-1.5 rounded-full border border-black/[0.04] bg-white text-[9px] font-medium text-muted-foreground flex items-center gap-1.5 shadow-sm"><i
+                                data-lucide="map-pin" class="w-3 h-3 opacity-40"></i> Areekode, Kerala</span>
+                        <span
+                            class="px-3.5 py-1.5 rounded-full border border-black/[0.04] bg-white text-[9px] font-medium text-muted-foreground flex items-center gap-1.5 shadow-sm"><i
+                                data-lucide="globe" class="w-3 h-3 opacity-40"></i> Self-taught Developer</span>
+                        <span
+                            class="px-3.5 py-1.5 rounded-full border border-black/[0.04] bg-white text-[9px] font-medium text-muted-foreground flex items-center gap-1.5 shadow-sm"><i
+                                data-lucide="heart" class="w-3 h-3 opacity-40"></i> Passionate Creator</span>
+                        <span
+                            class="px-3.5 py-1.5 rounded-full border border-black/[0.04] bg-white text-[9px] font-medium text-muted-foreground flex items-center gap-1.5 shadow-sm"><i
+                                data-lucide="coffee" class="w-3 h-3 opacity-40"></i> Fueled by Coffee</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <div class="wobbly-container group transition-all duration-300 hover:scale-105 active:scale-95 cursor-default hover:shadow-xl"
+                        data-variant="square">
+                        <div class="wobbly-content p-6 text-center">
+                            <span class="text-4xl font-black font-display block mb-1 text-[#111]"><span
+                                    data-count="3">0</span>+</span>
+                            <span class="text-[9px] font-bold text-[#777] uppercase tracking-wider">Years
+                                Experience</span>
+                        </div>
+                    </div>
+                    <div class="wobbly-container group transition-all duration-300 hover:scale-105 active:scale-95 cursor-default hover:shadow-xl"
+                        data-variant="square">
+                        <div class="wobbly-content p-6 text-center">
+                            <span class="text-4xl font-black font-display block mb-1 text-[#111]"><span
+                                    data-count="20">0</span>+</span>
+                            <span class="text-[9px] font-bold text-[#777] uppercase tracking-wider">Projects
+                                Completed</span>
+                        </div>
+                    </div>
+                    <div class="wobbly-container group transition-all duration-300 hover:scale-105 active:scale-95 cursor-default hover:shadow-xl"
+                        data-variant="square">
+                        <div class="wobbly-content p-6 text-center">
+                            <span class="text-4xl font-black font-display block mb-1 text-[#111]"><span
+                                    data-count="15">0</span>+</span>
+                            <span class="text-[9px] font-bold text-[#777] uppercase tracking-wider">Happy Clients</span>
+                        </div>
+                    </div>
+                    <div class="wobbly-container group transition-all duration-300 hover:scale-105 active:scale-95 cursor-default hover:shadow-xl"
+                        data-variant="square">
+                        <div class="wobbly-content p-6 text-center">
+                            <span class="text-4xl font-black font-display block mb-1 text-[#111]"><span
+                                    data-count="5">0</span>+</span>
+                            <span class="text-[9px] font-bold text-[#777] uppercase tracking-wider">Awards &
+                                Features</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section id="skills" class="py-12">
+        <div class="container mx-auto px-12 md:px-24">
+            <div class="text-center mb-10" data-aos="fade-up">
+                <h2 class="text-4xl font-black font-display mb-3 tracking-tight text-[#111]">What I Do</h2>
+                <p class="text-[13px] font-medium text-[#777] tracking-[0.05em]">End-to-end digital expertise — from
+                    concept to launch and beyond.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Branding Card -->
+                <div class="wobbly-container group" data-aos="fade-up">
+                    <div class="wobbly-content p-6 flex flex-col h-full items-start min-h-[260px]">
+                        <div class="w-full flex justify-between items-start mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#111] flex items-center justify-center group-hover:rotate-12 transition-transform shadow-lg">
+                                <i data-lucide="palette" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <span
+                                class="text-5xl font-black text-black/[0.03] font-display select-none -translate-y-4">01</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-2 font-display text-[#111]">Branding & Design</h3>
+                        <p class="text-[13px] text-[#666] leading-relaxed font-light mb-auto">Logos, brand identity,
+                            social media kits, and visual systems that make businesses stand out.</p>
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-white text-[8px] font-bold text-[#555] uppercase tracking-widest">Logo
+                                Design</span>
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-white text-[8px] font-bold text-[#555] uppercase tracking-widest">Brand
+                                Guidelines</span>
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-white text-[8px] font-bold text-[#555] uppercase tracking-widest">Social
+                                Media</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Development Card -->
+                <div class="wobbly-container group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="wobbly-content p-6 flex flex-col h-full items-start min-h-[260px]">
+                        <div class="w-full flex justify-between items-start mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#111] flex items-center justify-center group-hover:rotate-12 transition-transform shadow-lg">
+                                <i data-lucide="code-2" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <span
+                                class="text-5xl font-black text-black/[0.03] font-display select-none -translate-y-4">02</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-2 font-display text-[#111]">Web Development</h3>
+                        <p class="text-[13px] text-[#666] leading-relaxed font-light mb-auto">Full-stack, responsive
+                            websites and web apps — fast, SEO-optimized, and designed to convert.</p>
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">React
+                                / Next.js</span>
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">Full-Stack</span>
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">E-Commerce</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- AI Card -->
+                <div class="wobbly-container group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="wobbly-content p-6 flex flex-col h-full items-start min-h-[260px]">
+                        <div class="w-full flex justify-between items-start mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#111] flex items-center justify-center group-hover:rotate-12 transition-transform shadow-lg">
+                                <i data-lucide="bot" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <span
+                                class="text-5xl font-black text-black/[0.03] font-display select-none -translate-y-4">03</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-2 font-display text-[#111]">AI Solutions</h3>
+                        <p class="text-[13px] text-[#666] leading-relaxed font-light mb-auto">Smart chatbots, automation
+                            tools, and AI-powered features that streamline workflows.</p>
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">AI
+                                Chatbots</span>
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">Automation</span>
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">Smart
+                                Integrations</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video Card -->
+                <div class="wobbly-container group" data-aos="fade-up">
+                    <div class="wobbly-content p-6 flex flex-col h-full items-start min-h-[260px]">
+                        <div class="w-full flex justify-between items-start mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#111] flex items-center justify-center group-hover:rotate-12 transition-transform shadow-lg">
+                                <i data-lucide="video" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <span
+                                class="text-5xl font-black text-black/[0.03] font-display select-none -translate-y-4">04</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-2 font-display text-[#111]">Motion & Video</h3>
+                        <p class="text-[13px] text-[#666] leading-relaxed font-light mb-auto">Engaging video content and
+                            motion graphics with dynamic visuals and smooth transitions.</p>
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">Video
+                                Editing</span>
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">Motion
+                                Graphics</span>
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">Social
+                                Reels</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- UI/UX Card -->
+                <div class="wobbly-container group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="wobbly-content p-6 flex flex-col h-full items-start min-h-[260px]">
+                        <div class="w-full flex justify-between items-start mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#111] flex items-center justify-center group-hover:rotate-12 transition-transform shadow-lg">
+                                <i data-lucide="layout" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <span
+                                class="text-5xl font-black text-black/[0.03] font-display select-none -translate-y-4">05</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-2 font-display text-[#111]">UI/UX Design</h3>
+                        <p class="text-[13px] text-[#666] leading-relaxed font-light mb-auto">User-centered interfaces
+                            with wireframes, prototypes, and polished visual designs.</p>
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">Wireframing</span>
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">Prototyping</span>
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">Design
+                                Systems</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Performance Card -->
+                <div class="wobbly-container group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="wobbly-content p-6 flex flex-col h-full items-start min-h-[260px]">
+                        <div class="w-full flex justify-between items-start mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#111] flex items-center justify-center group-hover:rotate-12 transition-transform shadow-lg">
+                                <i data-lucide="zap" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <span
+                                class="text-5xl font-black text-black/[0.03] font-display select-none -translate-y-4">06</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-2 font-display text-[#111]">Performance & SEO</h3>
+                        <p class="text-[13px] text-[#666] leading-relaxed font-light mb-auto">Speed optimization, search
+                            engine visibility, and conversion-focused strategies.</p>
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">SEO
+                                Strategy</span>
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">Core
+                                Web Vitals</span>
+                            <span
+                                class="px-2.5 py-1.5 rounded-full border border-black/[0.08] bg-black/[0.01] text-[8px] font-bold text-[#555] uppercase tracking-widest">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Work Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-12 md:px-24">
+            <h2 class="text-5xl font-black font-display mb-3 tracking-tighter text-[#111]" data-aos="fade-up">Selected
+                Work</h2>
+            <p class="text-[14px] font-medium text-[#777] mb-12" data-aos="fade-up" data-aos-delay="100">A curated
+                collection of projects I've designed & developed.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- DropDok -->
+                <a href="https://dropdok.vercel.app" target="_blank"
+                    class="project-card group relative rounded-2xl overflow-hidden aspect-[11/14] shadow-2xl"
+                    data-aos="zoom-in">
+                    <img src="assets/images/card-dropdok.jpg" alt="DropDok"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                    <div class="absolute top-6 left-6">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md text-white text-[8px] font-bold uppercase tracking-widest">WEB
+                            APP</span>
+                    </div>
+                    <div class="absolute bottom-10 left-8 right-8 text-white">
+                        <h3 class="text-2xl font-black font-display mb-1.5">DropDok</h3>
+                        <p class="text-[10px] text-white/50 leading-relaxed font-medium uppercase tracking-wider">Smart
+                            document management platform for easy file handling and sharing.</p>
+                    </div>
+                </a>
+                <!-- KMCT -->
+                <a href="https://kmct.vercel.app" target="_blank"
+                    class="project-card group relative rounded-2xl overflow-hidden aspect-[11/14] shadow-2xl"
+                    data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/images/card-chatbot.jpg" alt="KMCT AI"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                    <div class="absolute top-6 left-6">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md text-white text-[8px] font-bold uppercase tracking-widest">AI
+                            / BOT</span>
+                    </div>
+                    <div class="absolute bottom-10 left-8 right-8 text-white">
+                        <h3 class="text-2xl font-black font-display mb-1.5">KMCT AI</h3>
+                        <p class="text-[10px] text-white/50 leading-relaxed font-medium uppercase tracking-wider">
+                            AI-powered chatbot for instant information and automated responses.</p>
+                    </div>
+                </a>
+                <!-- Kakoki -->
+                <a href="https://kakokicreative.in" target="_blank"
+                    class="project-card group relative rounded-2xl overflow-hidden aspect-[11/14] shadow-2xl"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/images/card-kakoki.jpg" alt="Kakoki"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                    <div class="absolute top-6 left-6">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md text-white text-[8px] font-bold uppercase tracking-widest">BRANDING</span>
+                    </div>
+                    <div class="absolute bottom-10 left-8 right-8 text-white">
+                        <h3 class="text-2xl font-black font-display mb-1.5">Kakoki</h3>
+                        <p class="text-[10px] text-white/50 leading-relaxed font-medium uppercase tracking-wider">
+                            Creative digital agency focused on branding and web solutions.</p>
+                    </div>
+                </a>
+                <!-- WebDev -->
+                <a href="#" class="project-card group relative rounded-2xl overflow-hidden aspect-[11/14] shadow-2xl"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <img src="assets/images/card-webdev.jpg" alt="WebDev"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                    <div class="absolute top-6 left-6">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md text-white text-[8px] font-bold uppercase tracking-widest">FULL-STACK</span>
+                    </div>
+                    <div class="absolute bottom-10 left-8 right-8 text-white">
+                        <h3 class="text-2xl font-black font-display mb-1.5">WebDev</h3>
+                        <p class="text-[10px] text-white/50 leading-relaxed font-medium uppercase tracking-wider">
+                            Full-stack AI-powered web applications and scalable systems.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16">
+        <div class="container mx-auto px-12 md:px-24">
+            <h2 class="text-5xl font-black font-display mb-12 tracking-tight text-center" data-aos="fade-up">Experience
+            </h2>
+            <div class="w-full max-w-[850px] mx-auto" data-aos="fade-up">
+                <div class="wobbly-container group" data-variant="landscape">
+                    <div class="wobbly-content p-10 sm:p-12 relative z-10">
+                        <div class="flex items-center gap-4 mb-10">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#111] flex items-center justify-center flex-shrink-0 shadow-xl group-hover:rotate-6 transition-transform">
+                                <i data-lucide="briefcase" class="w-4.5 h-4.5 text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold font-display leading-none mb-1">Kakoki Creative Co.</h3>
+                                <p class="text-[12px] font-medium text-muted-foreground/60">Designer & Developer</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-5">
+                            <li class="flex items-start gap-4">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#111] mt-2 flex-shrink-0"></span>
+                                <p class="text-[14px] text-muted-foreground leading-relaxed font-light">Worked on
+                                    branding, web development, and AI-based solutions</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#111] mt-2 flex-shrink-0"></span>
+                                <p class="text-[14px] text-muted-foreground leading-relaxed font-light">Delivered
+                                    projects for multiple business types — agencies, hospitals, shops, restaurants</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#111] mt-2 flex-shrink-0"></span>
+                                <p class="text-[14px] text-muted-foreground leading-relaxed font-light">Focused on
+                                    modern UI, performance, and scalable systems</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-12 md:px-24">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-5xl font-black font-display mb-4 tracking-tight">Get In Touch</h2>
+                <p class="text-[13px] font-medium text-muted-foreground/50 tracking-[0.05em]">Have a project in mind?
+                    Let's bring your ideas to life.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                <div data-aos="fade-right">
+                    <div class="wobbly-container">
+                        <div class="wobbly-content p-10 space-y-8">
+                            <h3 class="text-xl font-black font-display tracking-tight">Contact Details</h3>
+                            <div class="space-y-8">
+                                <div class="flex items-center gap-6 group cursor-pointer">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-[#111] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                        <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+                                    </div>
+                                    <div><span
+                                            class="text-[9px] font-black text-muted-foreground/50 uppercase tracking-[0.2em] block mb-1">Email</span><span
+                                            class="text-sm font-medium">farhankotta786@gmail.com</span></div>
+                                </div>
+                                <div class="flex items-center gap-6 group cursor-pointer">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-[#111] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                        <i data-lucide="phone" class="w-5 h-5 text-white"></i>
+                                    </div>
+                                    <div><span
+                                            class="text-[9px] font-black text-muted-foreground/50 uppercase tracking-[0.2em] block mb-1">Phone</span><span
+                                            class="text-sm font-medium">+91 7558908826</span></div>
+                                </div>
+                                <div class="flex items-center gap-6 group cursor-pointer">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-[#111] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                        <i data-lucide="map-pin" class="w-5 h-5 text-white"></i>
+                                    </div>
+                                    <div><span
+                                            class="text-[9px] font-black text-muted-foreground/50 uppercase tracking-[0.2em] block mb-1">Location</span><span
+                                            class="text-sm font-medium">Kerala, India</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="wobbly-container">
+                        <form class="wobbly-content p-10 space-y-5" onsubmit="event.preventDefault();">
+                            <div><label
+                                    class="text-[9px] font-black text-muted-foreground/50 uppercase tracking-[0.2em] block mb-2">Full
+                                    Name</label><input type="text" placeholder="John Doe"
+                                    class="w-full bg-white rounded-xl px-6 py-4 outline-none text-sm font-light border border-black/[0.03] focus:border-black/10 transition-all">
+                            </div>
+                            <div><label
+                                    class="text-[9px] font-black text-muted-foreground/50 uppercase tracking-[0.2em] block mb-2">Email
+                                    Address</label><input type="email" placeholder="john@example.com"
+                                    class="w-full bg-white rounded-xl px-6 py-4 outline-none text-sm font-light border border-black/[0.03] focus:border-black/10 transition-all">
+                            </div>
+                            <div><label
+                                    class="text-[9px] font-black text-muted-foreground/50 uppercase tracking-[0.2em] block mb-2">Message</label><textarea
+                                    rows="4" placeholder="How can I help you?"
+                                    class="w-full bg-white rounded-xl px-6 py-4 outline-none text-sm font-light border border-black/[0.03] focus:border-black/10 transition-all resize-none"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-[#111] text-white py-5 rounded-xl text-[10px] font-black uppercase tracking-[0.3em] hover:bg-black transition-all flex items-center justify-center gap-2">Send
+                                Message <i data-lucide="send" class="w-3.5 h-3.5"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="bg-white pt-16 px-6 md:px-12" aria-label="Site footer">
+        <div class="max-w-[1400px] mx-auto bg-[#111] rounded-[36px] px-10 md:px-16 py-12 text-white">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-14">
+                <div class="space-y-2">
+                    <h2 class="text-3xl md:text-4xl font-black font-display tracking-tight leading-none">
+                        Let's <span class="text-white">Connect</span>
+                    </h2>
+                    <a href="mailto:farhankotta786@gmail.com"
+                        class="flex items-center gap-2 text-white/40 hover:text-white/80 transition-colors group mt-1"
+                        aria-label="Email Farhan Mubeen">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 shrink-0" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                        <span class="text-[12px] font-medium tracking-wide">farhankotta786@gmail.com</span>
+                    </a>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <!-- Info Icons -->
+                    <div class="w-11 h-11 rounded-xl bg-white/[0.06] border border-white/[0.06] flex items-center justify-center group cursor-help" title="Location: Areekode, Kerala">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white/40 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div class="w-11 h-11 rounded-xl bg-white/[0.06] border border-white/[0.06] flex items-center justify-center group cursor-help" title="Self-taught Developer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white/40 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20"/><path d="M12 2a14.5 14.5 0 0 1 0 20"/><path d="M2 12h20"/></svg>
+                    </div>
+                    <div class="w-11 h-11 rounded-xl bg-white/[0.06] border border-white/[0.06] flex items-center justify-center group cursor-help" title="Passionate Creator">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white/40 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    </div>
+                    <div class="w-11 h-11 rounded-xl bg-white/[0.06] border border-white/[0.06] flex items-center justify-center group cursor-help" title="Fueled by Coffee">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white/40 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="w-[1px] h-11 bg-white/10 mx-1"></div>
+
+                    <!-- Social Links -->
+                    <a href="https://linkedin.com/in/farhankakoki" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                        class="w-11 h-11 rounded-xl bg-white/[0.06] border border-white/[0.06] flex items-center justify-center hover:bg-white/[0.14] transition-all group">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="w-4 h-4 text-white/40 group-hover:text-white transition-colors" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect width="4" height="12" x="2" y="9" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/kakokicreative" target="_blank" rel="noopener noreferrer"
+                        aria-label="Twitter"
+                        class="w-11 h-11 rounded-xl bg-white/[0.06] border border-white/[0.06] flex items-center justify-center hover:bg-white/[0.14] transition-all group">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="w-4 h-4 text-white/40 group-hover:text-white transition-colors" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.738l7.737-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/kakokicreative" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        class="w-11 h-11 rounded-xl bg-white/[0.06] border border-white/[0.06] flex items-center justify-center hover:bg-white/[0.14] transition-all group">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="w-4 h-4 text-white/40 group-hover:text-white transition-colors" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-4">
+                <span class="text-[10px] font-medium text-white/20 tracking-[0.3em] uppercase">&#169; 2026 Farhan Mubeen
+                    K</span>
+                <span class="text-[10px] font-medium text-white/20 tracking-[0.1em]">Kakoki Creative Co.</span>
+            </div>
+        </div>
+        <div class="h-10 bg-white"></div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

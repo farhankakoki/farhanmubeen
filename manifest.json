@@ -1,0 +1,16 @@
+{
+  "name": "Farhan Mubeen Portfolio",
+  "short_name": "Farhan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111111",
+  "description": "Farhan Mubeen - Graphic Designer & Web Developer at Kakoki Creative Co.",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
